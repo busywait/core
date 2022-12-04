@@ -48,3 +48,10 @@ def test_uri_parsing():
     # test invalid uri
     with raises(MusicAssistantError):
         uri.parse_uri("invalid://blah")
+
+
+def test_compare_different_no_irsc_or_mbid():
+    """Test the comparison of different files when there are no isrc or musicbrainz tags."""
+
+    """Start with a failing test case"""
+    assert "true" == "false"
